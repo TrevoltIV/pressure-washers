@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/home.module.css'
+import styles from '../styles/home.module.css'
 
 
 
@@ -26,7 +26,7 @@ export default function Home() {
         setShowMenu(false)
       }
     })
-  })
+  }, [showMenu])
 
   return (
     <>
