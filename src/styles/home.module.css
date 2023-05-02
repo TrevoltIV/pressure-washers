@@ -3,204 +3,194 @@
 
 
 .container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header {
-  background: #fff;
-  width: 96%;
-  height: 160px;
-  z-index: 30;
+.ctaWrapper {
+  width: 95%;
 
-  border-bottom: 3px solid #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta {
+  background: #f5f5f5;
+  width: 100%;
+  height: 450px;
+  margin-top: 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  border: solid 6px #f1f1f1;
+  border-radius: 7px;
 }
 
-.logo {
-  width: 250px;
-  height: 141px;
+.ctaImageWrapper {
 
-  user-select: none;
-  -webkit-user-drag: none;
 }
 
-.headerSidebox {
-  width: 485px;
+.ctaImage {
+  width: 40vw;
+  height: 23vw;
+  margin-left: 10px;
+
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.ctaTextWrapper {
+  width: 52%;
   height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
-.banner {
-  width: 100%;
-  height: 45%;
+.ctaTitle {
+  margin-top: 80px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  user-select: none;
-}
-
-.bannerTitle {
-  color: #d3ae0a;
+  color: #333;
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
-.bannerText {
-  color: #0849c0;
-  font-family: sans-serif;
-  font-size: 22px;
-  font-weight: 700;
+.ctaText {
+  margin: 30px 30px 0 0;
+
+  color: #727272;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-.menuBtn {
-  width: 38px;
-  height: 38px;
-  margin-right: 40px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
+.ctaButtonWrapper {
+  margin-top: 40px;
 }
 
-.menuBtn:hover .menuBtnLine {
-  background: #fff;
+.ctaButton {
+  background: #333;
+  padding: 10px 20px;
 
-  box-shadow: 0 0 5px rgba(0,0,0,0.6);
-
-  transition: background-color .2s ease;
-}
-
-.menuBtnLines {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.menuBtnLinesOpen {
-  background: rgb(238, 238, 238);
-  width: 100%;
-  height: 100%;
-
+  border: none;
   border-radius: 5px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.menuBtnLinesOpen .menuBtnLine:first-child {
-  transform: rotate(45deg) translate(9px, 9px);
-
-  transition: all .2s ease;
-}
-
-.menuBtnLinesOpen .menuBtnLine:nth-child(2) {
-  opacity: 0;
-
-  transition: all .2s ease;
-}
-
-.menuBtnLinesOpen .menuBtnLine:last-child {
-  transform: rotate(-45deg) translate(9px, -9px);
-
-  transition: all .2s ease;
-}
-
-.menuBtnLine {
-  background: rgb(110, 110, 110);
-  width: 35px;
-  height: 6px;
-
-  border-radius: 2px;
-
-  transition: all .2s ease;
-}
-
-.menu {
-  background: rgb(35, 107, 202);
-  width: 96%;
-  height: 500px;
-  z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-
-  transition: all .2s ease;
-  user-select: none;
-}
-
-.menuCollapsed {
-  background: rgb(35, 107, 202);
-  width: 96%;
-  height: 0px;
-  z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-
-  visibility: hidden;
-  overflow: hidden;
-
-  transition: all .2s ease;
-}
-
-.menuItem {
-  background: rgb(0, 76, 148);
-  width: 80%;
-  height: 100px;
-
-  border-radius: 4px;
-}
-
-.menuItem:hover {
-  background: rgb(63, 63, 63);
-  outline: solid 2px #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
-
-  transition: background-color .2s ease;
-}
-
-.menuItemLink {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   color: #fff;
   text-decoration: none;
-  font-family: 'Montserrat';
-  font-size: 25px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.ctaButton:hover {
+  background: #686868;
+}
+
+.contactFormWrapper {
+  width: 100%;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactFormTitle {
+  margin-top: 10px;
+
+  color: #333;
+  font-family: sans-serif;
+  font-size: 2rem;
   font-weight: 700;
+}
+
+.contactForm {
+  display: flex;
+  align-items: center;
+}
+
+.contactFormInfoInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactFormInput {
+  background: rgb(243, 243, 243);
+  width: 300px;
+  height: 32px;
+  margin: 10px 0;
+  padding: 6px 0 6px 10px;
+
+  border: none;
+  border-bottom: solid 2px #9c9c9c;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  outline: none;
+
+  font-family: 'Montserrat';
+  font-size: 17px;
+}
+
+.contactFormTextarea {
+  background: rgb(243, 243, 243);
+  width: 400px;
+  height: 160px;
+  margin-left: 50px;
+  padding: 10px 0 0 10px;
+
+  border: none;
+  border-bottom: solid 2px #9c9c9c;
+  outline: none;
+  resize: none;
+
+  font-family: 'Montserrat';
+  font-size: 17px;
+}
+
+.contactFormButton {
+  background: #333;
+  width: 200px;
+  height: 40px;
+  margin-top: 15px;
+
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.contactFormButton:hover {
+  background: #686868;
+}
+
+.footer {
+  background: rgb(35, 107, 202);
+  width: 100%;
+  height: 100px;
 }
