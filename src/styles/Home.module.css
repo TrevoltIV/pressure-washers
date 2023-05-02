@@ -72,7 +72,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
   cursor: pointer;
 }
@@ -85,12 +85,55 @@
   transition: background-color .2s ease;
 }
 
+.menuBtnLines {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menuBtnLinesOpen {
+  background: rgb(238, 238, 238);
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menuBtnLinesOpen .menuBtnLine:first-child {
+  transform: rotate(45deg) translate(9px, 9px);
+
+  transition: all .2s ease;
+}
+
+.menuBtnLinesOpen .menuBtnLine:nth-child(2) {
+  opacity: 0;
+
+  transition: all .2s ease;
+}
+
+.menuBtnLinesOpen .menuBtnLine:last-child {
+  transform: rotate(-45deg) translate(9px, -9px);
+
+  transition: all .2s ease;
+}
+
 .menuBtnLine {
   background: rgb(110, 110, 110);
   width: 35px;
   height: 6px;
 
   border-radius: 2px;
+
+  transition: all .2s ease;
 }
 
 .menu {

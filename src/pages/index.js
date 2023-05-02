@@ -55,9 +55,11 @@ export default function Home() {
           </Link>
           <div className={styles.headerSidebox}>
             <div className={styles.menuBtn} onClick={() => setShowMenu(!showMenu)}>
-              <div className={styles.menuBtnLine}></div>
-              <div className={styles.menuBtnLine}></div>
-              <div className={styles.menuBtnLine}></div>
+              <div className={showMenu ? styles.menuBtnLinesOpen : styles.menuBtnLines}>
+                <div className={styles.menuBtnLine}></div>
+                <div className={styles.menuBtnLine}></div>
+                <div className={styles.menuBtnLine}></div>
+              </div>
             </div>
           </div>
         </div>
